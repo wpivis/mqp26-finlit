@@ -23,6 +23,7 @@ import { ResolutionWarning } from './interface/ResolutionWarning';
 import { useFetchStylesheet } from '../utils/fetchStylesheet';
 import { ScreenRecordingContext, useScreenRecording } from '../store/hooks/useScreenRecording';
 import { ScreenRecordingRejection } from './interface/ScreenRecordingRejection';
+import { DeviceWarning } from './interface/DeviceWarning';
 
 export function StepRenderer() {
   const windowEvents = useRef<EventType[]>([]);
@@ -148,6 +149,7 @@ export function StepRenderer() {
           {showTitleBar && (
           <AppHeader studyNavigatorEnabled={studyNavigatorEnabled} dataCollectionEnabled={dataCollectionEnabled} />
           )}
+          <DeviceWarning />
           <ResolutionWarning />
           {isScreenRecordingUserRejected && <ScreenRecordingRejection />}
           <HelpModal />
