@@ -1,13 +1,13 @@
 {
   "$schema": "https://raw.githubusercontent.com/revisit-studies/study/v2.2.0/src/parser/StudyConfigSchema.json",
   "studyMetadata": {
-    "title": "MQP Prototype Demo",
+    "title": "Passing Data from reVISit to HTML and back",
     "version": "pilot",
     "authors": [
       "The reVISit Team"
     ],
-    "date": "2025-11-04",
-    "description": "A demo test for ReVisit implementation of prototype.",
+    "date": "2023-04-14",
+    "description": "A demo of how to pass visualization data from reVISit to HTML and send user answers from HTML back to the reVISit.",
     "organizations": [
       "University of Utah",
       "WPI",
@@ -16,161 +16,74 @@
   },
   "uiConfig": {
     "contactEmail": "contact@revisit.dev",
-    "helpTextPath": "demo-prototype/assets/help.md",
+    "helpTextPath": "demo-html-input/assets/help.md",
     "logoPath": "revisitAssets/revisitLogoSquare.svg",
     "withProgressBar": true,
     "autoDownloadStudy": false,
-    "withSidebar": true,
-    "enumerateQuestions": true
+    "autoDownloadTime": 5000,
+    "withSidebar": false
+  },
+  "baseComponents": {
+    "bar-chart": {
+      "type": "website",
+      "response": [
+        {
+          "id": "barChart",
+          "prompt": "Your selected answer:",
+          "location": "belowStimulus",
+          "type": "reactive"
+        }
+      ],
+      "path": "demo-html-input/assets/bar-chart-interaction.html",
+      "instructionLocation": "aboveStimulus"
+    }
   },
   "components": {
     "introduction": {
       "type": "markdown",
-      "path": "demo-prototype/assets/introduction.md",
+      "path": "demo-html-input/assets/introduction.md",
       "response": []
     },
-    "pre": {
-      "type": "questionnaire",
-      "response": [
-        {
-          "id": "textField2",
-          "type": "textOnly",
-          "location": "aboveStimulus",
-          "prompt": "# Questions before seeing prototype\n\n Answer below",
-          "restartEnumeration": true
-        },
-        {
-          "id": "q-current-methods",
-          "prompt": "How do you currently track your finances or savings?",
-          "location": "aboveStimulus",
-          "type": "longText",
-          "placeholder": "Enter your long comments here"
-        },
-        {
-          "id": "q-used-apps",
-          "prompt": "What apps or tools have you used for money in the past? What did you like or dislike?",
-          "location": "aboveStimulus",
-          "type": "longText",
-          "placeholder": "Enter your long comments here"
-        },
-        {
-          "id": "q-features",
-          "prompt": "What features do you expect in finance tracking/saving apps?",
-          "location": "aboveStimulus",
-          "type": "longText",
-          "placeholder": "Enter your long comments here"
-        }
-      ]
+    "bar-chart-1": {
+      "baseComponent": "bar-chart",
+      "description": "A trial for the user to click the larges bar",
+      "instruction": "Click on the largest bar",
+      "parameters": {
+        "barData": [
+          0.32,
+          0.01,
+          1.2,
+          1.3,
+          0.82,
+          0.4,
+          0.3
+        ]
+      }
     },
-    "figmaTask": {
-      "type": "website",
-      "path": "https://embed.figma.com/proto/qpAmuGKQTtGntDFAnCHOVq/Untitled?page-id=1%3A91&node-id=1-93&p=f&viewport=-42%2C-31%2C0.89&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1%3A93&embed-host=share",
-      "instruction": "Please interact with the prototype below to complete the task.",
-      "response": []
-    },
-    "demo": {
-      "type": "questionnaire",
-      "response": [
-        {
-          "id": "header",
-          "type": "textOnly",
-          "location": "aboveStimulus",
-          "prompt": "# Questions While Seeing Prototype\n\n Answer below",
-          "restartEnumeration": true
-        },
-        {
-          "id": "q-confusing",
-          "prompt": "Is there anything on this page that feels confusing or out of place?",
-          "location": "aboveStimulus",
-          "type": "longText",
-          "placeholder": "Enter your long comments here"
-        },
-        {
-          "id": "q-missing",
-          "prompt": "What, if anything, is missing from this screen?",
-          "location": "aboveStimulus",
-          "type": "longText",
-          "placeholder": "Enter your long comments here"
-        }
-      ]
-    },
-    "post": {
-      "type": "questionnaire",
-      "response": [
-        {
-          "id": "textField2",
-          "type": "textOnly",
-          "location": "aboveStimulus",
-          "prompt": "# Questions after seeing prototype\n\n Answer below",
-          "restartEnumeration": true
-        },
-        {
-          "id": "q-overall-impression",
-          "prompt": "What was your overall impression of the prototype?",
-          "location": "aboveStimulus",
-          "type": "longText",
-          "placeholder": "Enter your long comments here"
-        },
-        {
-          "id": "q-three-words",
-          "prompt": "What three words would you use to describe this prototype?",
-          "location": "aboveStimulus",
-          "type": "longText",
-          "placeholder": "Enter your long comments here"
-        },
-        {
-          "id": "q-like-dislike",
-          "prompt": "What did you like most about the prototype? What did you like least?",
-          "location": "aboveStimulus",
-          "type": "longText",
-          "placeholder": "Enter your long comments here"
-        },
-        {
-          "id": "q-most-frustrating",
-          "prompt": "What was the most frustrating part of the experience, if any?",
-          "location": "aboveStimulus",
-          "type": "longText",
-          "placeholder": "Enter your long comments here"
-        },
-        {
-          "id": "q-streak-feedback",
-          "prompt": "If you could change one thing about the streak feature, what would it be?",
-          "location": "aboveStimulus",
-          "type": "longText",
-          "placeholder": "Enter your long comments here"
-        },
-        {
-          "id": "q-goals-feedback",
-          "prompt": "If you could change one thing about the goal feature, what would it be?",
-          "location": "aboveStimulus",
-          "type": "longText",
-          "placeholder": "Enter your long comments here"
-        },
-        {
-          "id": "q-magic-wand",
-          "prompt": "If you had a magic wand and could change, add, or remove anything, what would it be?",
-          "location": "aboveStimulus",
-          "type": "longText",
-          "placeholder": "Enter your long comments here"
-        },
-        {
-          "id": "q-additional-comments",
-          "prompt": "Is there anything else you'd like to share that I didn't ask about?",
-          "location": "aboveStimulus",
-          "type": "longText",
-          "placeholder": "Enter your long comments here"
-        }
-      ]
+    "bar-chart-2": {
+      "baseComponent": "bar-chart",
+      "description": "A trial for the user to click the smallest bar",
+      "instruction": "Click on the smallest bar",
+      "parameters": {
+        "barData": [
+          1.2,
+          1.2,
+          1.2,
+          1.3,
+          0.82,
+          0.4,
+          -0.3,
+          0.3
+        ]
+      }
     }
   },
   "sequence": {
     "order": "fixed",
     "components": [
       "introduction",
-      "pre",
-      "figmaTask",
-      "demo",
-      "post"
+      "bar-chart-1",
+      "bar-chart-2"
     ]
   }
 }

@@ -1,6 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/revisit-studies/study/v2.2.0/src/parser/GlobalConfigSchema.json",
   "configsList": [
+    "mqp-prototype",
     "tutorial",
     "demo-html",
     "demo-html-video",
@@ -49,6 +50,9 @@
     "test-step-logic"
   ],
   "configs": {
+    "mqp-prototype": {
+      "path": "mqp-prototype/config.json"
+    },
     "tutorial": {
       "path": "tutorial/config.json"
     },

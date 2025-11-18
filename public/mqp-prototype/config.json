@@ -4,7 +4,7 @@
     "title": "MQP Prototype Demo",
     "version": "pilot",
     "authors": [
-      "The reVISit Team"
+      "MQP Team"
     ],
     "date": "2025-11-04",
     "description": "A demo test for ReVisit implementation of prototype.",
@@ -64,7 +64,7 @@
     },
     "figmaTask": {
       "type": "website",
-      "path": "https://embed.figma.com/design/GxWgToAXPTviE2kBkKKdxS/MQP-Figma?node-id=0-1&embed-host=share",
+      "path": "https://embed.figma.com/proto/qpAmuGKQTtGntDFAnCHOVq/Untitled?page-id=1%3A91&node-id=1-93&p=f&viewport=-42%2C-31%2C0.89&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1%3A93&embed-host=share",
       "instruction": "Please interact with the prototype below to complete the task.",
       "response": []
     },
@@ -75,7 +75,7 @@
           "id": "header",
           "type": "textOnly",
           "location": "aboveStimulus",
-          "prompt": "# Questions After Seeing Prototype\n\n Answer below",
+          "prompt": "# Questions While Seeing Prototype\n\n Answer below",
           "restartEnumeration": true
         },
         {
@@ -97,6 +97,13 @@
     "post": {
       "type": "questionnaire",
       "response": [
+        {
+          "id": "textField2",
+          "type": "textOnly",
+          "location": "aboveStimulus",
+          "prompt": "# Questions after seeing prototype\n\n Answer below",
+          "restartEnumeration": true
+        },
         {
           "id": "q-overall-impression",
           "prompt": "What was your overall impression of the prototype?",
