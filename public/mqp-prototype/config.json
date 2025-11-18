@@ -105,22 +105,21 @@
           "restartEnumeration": true
         },
         {
-          "id": "q-overall-impression",
-          "prompt": "What was your overall impression of the prototype?",
+          "id": "q-feature-satisfaction",
+          "prompt": "Rate your satisfaction from 1 (Highly Unsatisfied) to 5 (Highly Satisfied) for the following items.",
+          "secondaryText": "A simple matrix of Likert responses with predefined options for satisfaction.",
           "location": "aboveStimulus",
-          "type": "longText",
-          "placeholder": "Enter your long comments here"
-        },
-        {
-          "id": "q-three-words",
-          "prompt": "What three words would you use to describe this prototype?",
-          "location": "aboveStimulus",
-          "type": "longText",
-          "placeholder": "Enter your long comments here"
+          "type": "matrix-radio",
+          "answerOptions": "satisfaction5",
+          "questionOptions": [
+            "Overall Prototype",
+            "Goals Feature",
+            "Streak Feature"
+          ]
         },
         {
           "id": "q-like-dislike",
-          "prompt": "What did you like most about the prototype? What did you like least?",
+          "prompt": "What did you like the most about the prototype? What did you like the least?",
           "location": "aboveStimulus",
           "type": "longText",
           "placeholder": "Enter your long comments here"
@@ -147,15 +146,8 @@
           "placeholder": "Enter your long comments here"
         },
         {
-          "id": "q-magic-wand",
-          "prompt": "If you had a magic wand and could change, add, or remove anything, what would it be?",
-          "location": "aboveStimulus",
-          "type": "longText",
-          "placeholder": "Enter your long comments here"
-        },
-        {
           "id": "q-additional-comments",
-          "prompt": "Is there anything else you'd like to share that I didn't ask about?",
+          "prompt": "Is there anything else you'd like to share that has not been asked?",
           "location": "aboveStimulus",
           "type": "longText",
           "placeholder": "Enter your long comments here"

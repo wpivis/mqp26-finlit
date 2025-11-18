@@ -24,8 +24,7 @@ test('test', async ({ page }) => {
   // Go to the next page
   await page.getByRole('button', { name: 'Next', exact: true }).click();
 
-  await page.getByTestId('q-overall-impression').fill('asdf');
-  await page.getByTestId('q-three-words').fill('asdf');
+  await page.getByTestId('q-feature-satisfaction').fill('asdf');
   await page.getByTestId('q-like-dislike').fill('asdf');
   await page.getByTestId('q-most-frustrating').fill('asdf');
   await page.getByTestId('q-streak-feedback').fill('asdf');
