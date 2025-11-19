@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 # Logs
 logs
 *.log
@@ -37,3 +38,6 @@ supabase/volumes/*
 !supabase/volumes/db/
 supabase/volumes/db/data
 !supabase/volumes/api/
+=======
+node_modules/
+>>>>>>> Stashed changes
