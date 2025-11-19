@@ -66,7 +66,15 @@
       "type": "website",
       "path": "https://embed.figma.com/proto/qpAmuGKQTtGntDFAnCHOVq/Untitled?page-id=1%3A91&node-id=1-93&p=f&viewport=-42%2C-31%2C0.89&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1%3A93&embed-host=share",
       "instruction": "Please interact with the prototype below to complete the task.",
-      "response": []
+      "response": [
+        {
+          "id": "q-asdftest",
+          "prompt": "Is there anything on this page that feels confusing or out of place?",
+          "location": "sidebar",
+          "type": "longText",
+          "placeholder": "Enter your long comments here"
+        }
+      ]
     },
     "demo": {
       "type": "questionnaire",
