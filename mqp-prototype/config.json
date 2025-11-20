@@ -29,14 +29,14 @@
       "path": "mqp-prototype/assets/introduction.md",
       "response": []
     },
-    "pre": {
+    "initialQuestions": {
       "type": "questionnaire",
       "response": [
         {
           "id": "textField2",
           "type": "textOnly",
           "location": "aboveStimulus",
-          "prompt": "# Questions before seeing prototype\n\n Answer below",
+          "prompt": "# Initial Questions\n\n Enter your answers below",
           "restartEnumeration": true
         },
         {
@@ -62,60 +62,47 @@
         }
       ]
     },
-    "figmaTask": {
+    "figmaQuestions": {
       "type": "website",
       "path": "https://embed.figma.com/proto/qpAmuGKQTtGntDFAnCHOVq/Untitled?page-id=1%3A91&node-id=1-93&p=f&viewport=-42%2C-31%2C0.89&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1%3A93&embed-host=share",
       "instruction": "Please interact with the prototype below to complete the task.",
       "response": [
         {
-          "id": "q-asdftest",
-          "prompt": "Is there anything on this page that feels confusing or out of place?",
-          "location": "sidebar",
-          "type": "longText",
-          "placeholder": "Enter your long comments here"
-        }
-      ]
-    },
-    "demo": {
-      "type": "questionnaire",
-      "response": [
-        {
           "id": "header",
           "type": "textOnly",
-          "location": "aboveStimulus",
-          "prompt": "# Questions While Seeing Prototype\n\n Answer below",
+          "location": "sidebar",
+          "prompt": "# Prototype & Questions\n\n Enter your answers below",
           "restartEnumeration": true
         },
         {
           "id": "q-confusing",
           "prompt": "Is there anything on this page that feels confusing or out of place?",
-          "location": "aboveStimulus",
+          "location": "sidebar",
           "type": "longText",
           "placeholder": "Enter your long comments here"
         },
         {
           "id": "q-missing",
           "prompt": "What, if anything, is missing from this screen?",
-          "location": "aboveStimulus",
+          "location": "sidebar",
           "type": "longText",
           "placeholder": "Enter your long comments here"
         }
       ]
     },
-    "post": {
+    "reflectionQuestions": {
       "type": "questionnaire",
       "response": [
         {
           "id": "textField2",
           "type": "textOnly",
           "location": "aboveStimulus",
-          "prompt": "# Questions after seeing prototype\n\n Answer below",
+          "prompt": "# Prototype Reflections\n\n Enter your answers below",
           "restartEnumeration": true
         },
         {
           "id": "q-feature-satisfaction",
           "prompt": "Rate your satisfaction from 1 (Highly Unsatisfied) to 5 (Highly Satisfied) for the following items.",
-          "secondaryText": "A simple matrix of Likert responses with predefined options for satisfaction.",
           "location": "aboveStimulus",
           "type": "matrix-radio",
           "answerOptions": "satisfaction5",
@@ -167,10 +154,9 @@
     "order": "fixed",
     "components": [
       "introduction",
-      "pre",
-      "figmaTask",
-      "demo",
-      "post"
+      "initialQuestions",
+      "figmaQuestions",
+      "reflectionQuestions"
     ]
   }
 }
