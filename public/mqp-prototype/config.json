@@ -64,8 +64,8 @@
     },
     "figmaTask": {
       "type": "website",
-      "path": "https://embed.figma.com/proto/qpAmuGKQTtGntDFAnCHOVq/Untitled?page-id=1%3A91&node-id=1-93&p=f&viewport=-42%2C-31%2C0.89&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1%3A93&embed-host=share",
-      "instruction": "Please interact with the prototype below to complete the task.",
+      "path": "https://embed.figma.com/proto/cPBlfjySSUhw069Qlo3R1a/MQP-Prototype?page-id=1%3A91&node-id=170-2&starting-point-node-id=170%3A2&scaling=min-zoom&content-scaling=fixed&embed-host=share",
+      "instruction": "Please interact with the prototype below to complete the task. Zoom out (Ctrl -) if needed",
       "response": []
     },
     "demo": {
