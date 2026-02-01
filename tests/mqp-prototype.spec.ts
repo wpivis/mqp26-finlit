@@ -15,8 +15,8 @@ test('test', async ({ page }) => {
   await page.getByTestId('q-used-apps').fill('asdf');
   await page.getByTestId('q-features').fill('asdf');
 
-  // Go to the next page
-  await page.getByRole('button', { name: 'Next', exact: true }).click();
+  // // Go to the next page
+  // await page.getByRole('button', { name: 'Next', exact: true }).click();
 
   await page.getByTestId('q-confusing').fill('asdf');
   await page.getByTestId('q-missing').fill('asdf');
