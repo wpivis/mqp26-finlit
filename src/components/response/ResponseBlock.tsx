@@ -26,10 +26,10 @@ import { useStudyConfig } from '../../store/hooks/useStudyConfig';
 import { useStoredAnswer } from '../../store/hooks/useStoredAnswer';
 
 type Props = {
-  status?: StoredAnswer;
-  config: IndividualComponent | null;
-  location: ResponseBlockLocation;
-  style?: React.CSSProperties;
+    status?: StoredAnswer;
+    config: IndividualComponent | null;
+    location: ResponseBlockLocation;
+    style?: React.CSSProperties;
 };
 
 function findMatchingStrings(arr1: string[], arr2: string[]): string[] {
@@ -208,7 +208,11 @@ export function ResponseBlock({
         if (correctAnswers[response.id] && !alertConfig[response.id]?.message.includes('You\'ve failed to answer this question correctly')) {
           updateAlertConfig(response.id, true, 'Correct Answer', 'You have answered the question correctly.', 'green');
         } else {
-          storeDispatch(saveIncorrectAnswer({ question: identifier, identifier: response.id, answer: (answerValidator.values as Record<string, unknown>)[response.id] }));
+          storeDispatch(saveIncorrectAnswer({
+            question: identifier,
+            identifier: response.id,
+            answer: (answerValidator.values as Record<string, unknown>)[response.id],
+          }));
           let message = '';
           if (trainingAttempts === -1) {
             message = 'Please try again.';
@@ -255,7 +259,7 @@ export function ResponseBlock({
           allowFailedTraining && newAttemptsUsed >= trainingAttempts
         ) || (
           Object.values(correctAnswers).every((isCorrect) => isCorrect)
-          && newAttemptsUsed <= trainingAttempts
+                    && newAttemptsUsed <= trainingAttempts
         ),
       );
     }
@@ -276,7 +280,8 @@ export function ResponseBlock({
         window.removeEventListener('keydown', handleKeyDown);
       };
     }
-    return () => {};
+    return () => {
+    };
   }, [checkAnswerProvideFeedback, nextOnEnter]);
 
   const nextButtonText = useMemo(() => configInUse?.nextButtonText ?? studyConfig.uiConfig.nextButtonText ?? 'Next', [configInUse, studyConfig]);
@@ -320,17 +325,29 @@ export function ResponseBlock({
                     disabled={disabledAttempts}
                   />
                   {alertConfig[response.id]?.visible && (
-                    <Alert mb="md" title={alertConfig[response.id].title} color={alertConfig[response.id].color}>
+                    <Alert
+                      mb="md"
+                      title={alertConfig[response.id].title}
+                      color={alertConfig[response.id].color}
+                    >
                       {alertConfig[response.id].message}
                       {alertConfig[response.id].message.includes('Please try again') && (
-                        <>
-                          <br />
-                          <br />
-                          If you&apos;re unsure
-                          {' '}
-                          <Anchor style={{ fontSize: 14 }} onClick={() => { storeDispatch(toggleShowHelpText()); storeDispatch(incrementHelpCounter({ identifier })); }}>review the help text.</Anchor>
-                          {' '}
-                        </>
+                      <>
+                        <br />
+                        <br />
+                        If you&apos;re unsure
+                        {' '}
+                        <Anchor
+                          style={{ fontSize: 14 }}
+                          onClick={() => {
+                            storeDispatch(toggleShowHelpText());
+                            storeDispatch(incrementHelpCounter({ identifier }));
+                          }}
+                        >
+                          review the help text.
+                        </Anchor>
+                        {' '}
+                      </>
                       )}
                       <br />
                       <br />
@@ -345,21 +362,21 @@ export function ResponseBlock({
       </Box>
 
       {showBtnsInLocation && (
-      <NextButton
-        disabled={(hasCorrectAnswerFeedback && !enableNextButton) || !answerValidator.isValid()}
-        label={nextButtonText}
-        configInUse={configInUse}
-        location={location}
-        checkAnswer={showBtnsInLocation && hasCorrectAnswerFeedback ? (
-          <Button
-            disabled={hasCorrectAnswer || (attemptsUsed >= trainingAttempts && trainingAttempts >= 0)}
-            onClick={() => checkAnswerProvideFeedback()}
-            px={location === 'sidebar' ? 8 : undefined}
-          >
-            Check Answer
-          </Button>
-        ) : null}
-      />
+        <NextButton
+          disabled={(hasCorrectAnswerFeedback && !enableNextButton) || !answerValidator.isValid()}
+          label={nextButtonText}
+          configInUse={configInUse}
+          location={location}
+          checkAnswer={showBtnsInLocation && hasCorrectAnswerFeedback ? (
+            <Button
+              disabled={hasCorrectAnswer || (attemptsUsed >= trainingAttempts && trainingAttempts >= 0)}
+              onClick={() => checkAnswerProvideFeedback()}
+              px={location === 'sidebar' ? 8 : undefined}
+            >
+              Check Answer
+            </Button>
+          ) : null}
+        />
       )}
     </>
   );
