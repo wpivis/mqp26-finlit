@@ -166,9 +166,9 @@
     "components": [
       "introduction",
       "$screen-recording.co.screenRecordingPermission",
-      "pre",
-      "figmaTask",
-      "post"
+      "initialQuestions",
+      "figmaQuestions",
+      "reflectionQuestions"
     ]
   }
 }
