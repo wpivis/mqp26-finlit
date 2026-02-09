@@ -101,7 +101,6 @@
         }
       ]
     },
-
     "figmaTaskB": {
       "type": "website",
       "recordAudio": true,
@@ -131,7 +130,7 @@
         }
       ]
     },
-    "post": {
+    "postA": {
       "type": "questionnaire",
       "previousButton": true,
       "recordAudio": true,
@@ -200,6 +199,68 @@
           "placeholder": "Enter a brief summary of your answer"
         }
       ]
+    },
+    "postB": {
+      "type": "questionnaire",
+      "previousButton": true,
+      "recordAudio": true,
+      "response": [
+        {
+          "id": "textField2",
+          "type": "textOnly",
+          "location": "aboveStimulus",
+          "prompt": "# Questions after seeing prototype\n\n Answer below",
+          "restartEnumeration": true
+        },
+        {
+          "id": "q-feature-satisfaction",
+          "prompt": "Rate your satisfaction from 1 (Highly Unsatisfied) to 5 (Highly Satisfied) for the following items.",
+          "secondaryText": "A simple matrix of Likert responses with predefined options for satisfaction.",
+          "location": "aboveStimulus",
+          "type": "matrix-radio",
+          "answerOptions": "satisfaction5",
+          "questionOptions": [
+            "Overall Prototype",
+            "Goals Feature",
+            "Budgeting Feature"
+          ]
+        },
+        {
+          "id": "q-like-dislike",
+          "prompt": "Describe what you liked the most about the prototype? What did you like the least?",
+          "location": "aboveStimulus",
+          "type": "longText",
+          "placeholder": "Enter a brief summary of your answer"
+        },
+        {
+          "id": "q-most-frustrating",
+          "prompt": "Please describe the specific feature that you found most confusing or difficult to use.",
+          "location": "aboveStimulus",
+          "type": "longText",
+          "placeholder": "Enter a brief summary of your answer"
+        },
+        {
+          "id": "q-goals-feedback",
+          "prompt": "Was there any information missing from the 'Goal' screens that you would have needed to feel confident using it?",
+          "location": "aboveStimulus",
+          "type": "longText",
+          "placeholder": "Enter a brief summary of your answer"
+        },
+        {
+          "id": "q-budget-feedback",
+          "prompt": "Was there any information missing from the income and expense breakdown that you would have needed to feel confident setting a budget?",
+          "location": "aboveStimulus",
+          "type": "longText",
+          "placeholder": "Enter a brief summary of your answer"
+        },
+        {
+          "id": "q-additional-comments",
+          "prompt": "Is there anything else you'd like to share that has not been asked?",
+          "location": "aboveStimulus",
+          "type": "longText",
+          "placeholder": "Enter a brief summary of your answer"
+        }
+      ]
     }
   },
   "sequence": {
@@ -212,11 +273,22 @@
         "order": "latinSquare",
         "numSamples": 1,
         "components": [
-          "figmaTaskA",
-          "figmaTaskB"
+          {
+            "order": "fixed",
+            "components": [
+              "figmaTaskA",
+              "postA"
+            ]
+          },
+          {
+            "order": "fixed",
+            "components": [
+              "figmaTaskB",
+              "postB"
+            ]
+          }
         ]
-      },
-      "post"
+      }
     ]
   }
 }
