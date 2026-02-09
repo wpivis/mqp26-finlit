@@ -39,6 +39,7 @@
     "pre": {
       "type": "questionnaire",
       "recordAudio": true,
+      "previousButton": true,
       "recordScreen": true,
       "response": [
         {
@@ -50,28 +51,28 @@
         },
         {
           "id": "q-current-methods",
-          "prompt": "How do you currently track your finances or savings?",
+          "prompt": "Please spend 60 seconds verbally describing your current method for tracking finances. Be specific about which apps, spreadsheets, or mental habits you use.",
           "location": "aboveStimulus",
           "type": "longText",
-          "placeholder": "Enter your comments here"
+          "placeholder": "Enter a brief summary of your answer"
         },
         {
           "id": "q-used-apps",
-          "prompt": "What apps or tools have you used for money in the past? What did you like or dislike?",
+          "prompt": "Recall a finance tool you have used in the past that frustrated you. Please describe exactly what went wrong or why you stopped using it.",
           "location": "aboveStimulus",
           "type": "longText",
-          "placeholder": "Enter your comments here"
+          "placeholder": "Enter a brief summary of your answer"
         },
         {
           "id": "q-features",
-          "prompt": "What features do you expect in finance tracking/saving apps?",
+          "prompt": "Before looking at the prototype, list 3 features you would consider 'mandatory' for a savings app.",
           "location": "aboveStimulus",
           "type": "longText",
-          "placeholder": "Enter your comments here"
+          "placeholder": "Enter a brief summary of your answer"
         }
       ]
     },
-    "figmaTask": {
+    "figmaTaskA": {
       "type": "website",
       "recordAudio": true,
       "path": "https://embed.figma.com/proto/cPBlfjySSUhw069Qlo3R1a/MQP-Prototype?page-id=1%3A91&node-id=170-2&starting-point-node-id=170%3A2&scaling=min-zoom&content-scaling=fixed&embed-host=share",
@@ -100,8 +101,39 @@
         }
       ]
     },
+
+    "figmaTaskB": {
+      "type": "website",
+      "recordAudio": true,
+      "path": "https://embed.figma.com/proto/cPBlfjySSUhw069Qlo3R1a/MQP-Prototype?node-id=2230-409&scaling=min-zoom&content-scaling=fixed&page-id=2230%3A250&starting-point-node-id=2230%3A409&embed-host=share",
+      "instruction": "Please interact with the prototype below to complete the task. Zoom out (Ctrl -) if needed",
+      "response": [
+        {
+          "id": "header",
+          "type": "textOnly",
+          "location": "sidebar",
+          "prompt": "# Prototype",
+          "restartEnumeration": true
+        },
+        {
+          "id": "q-confusing",
+          "prompt": "Is there anything on this page that feels confusing or out of place?",
+          "location": "sidebar",
+          "type": "longText",
+          "placeholder": "Enter your comments here"
+        },
+        {
+          "id": "q-missing",
+          "prompt": "What, if anything, is missing from this screen?",
+          "location": "sidebar",
+          "type": "longText",
+          "placeholder": "Enter your comments here"
+        }
+      ]
+    },
     "post": {
       "type": "questionnaire",
+      "previousButton": true,
       "recordAudio": true,
       "response": [
         {
@@ -121,43 +153,51 @@
           "questionOptions": [
             "Overall Prototype",
             "Goals Feature",
-            "Streak Feature"
+            "Streak Feature",
+            "Budgeting Feature"
           ]
         },
         {
           "id": "q-like-dislike",
-          "prompt": "What did you like the most about the prototype? What did you like the least?",
+          "prompt": "Describe what you liked the most about the prototype? What did you like the least?",
           "location": "aboveStimulus",
           "type": "longText",
-          "placeholder": "Enter your comments here"
+          "placeholder": "Enter a brief summary of your answer"
         },
         {
           "id": "q-most-frustrating",
-          "prompt": "What was the most frustrating part of the experience, if any?",
+          "prompt": "Please describe the specific feature that you found most confusing or difficult to use.",
           "location": "aboveStimulus",
           "type": "longText",
-          "placeholder": "Enter your comments here"
+          "placeholder": "Enter a brief summary of your answer"
         },
         {
           "id": "q-streak-feedback",
-          "prompt": "If you could change one thing about the streak feature, what would it be?",
+          "prompt": "If you could change the way the Streak feature works, what would you change?",
           "location": "aboveStimulus",
           "type": "longText",
-          "placeholder": "Enter your comments here"
+          "placeholder": "Enter a brief summary of your answer"
         },
         {
           "id": "q-goals-feedback",
-          "prompt": "If you could change one thing about the goal feature, what would it be?",
+          "prompt": "Was there any information missing from the 'Goal' screens that you would have needed to feel confident using it?",
           "location": "aboveStimulus",
           "type": "longText",
-          "placeholder": "Enter your comments here"
+          "placeholder": "Enter a brief summary of your answer"
+        },
+        {
+          "id": "q-budget-feedback",
+          "prompt": "Was there any information missing from the income and expense breakdown that you would have needed to feel confident setting a budget?",
+          "location": "aboveStimulus",
+          "type": "longText",
+          "placeholder": "Enter a brief summary of your answer"
         },
         {
           "id": "q-additional-comments",
           "prompt": "Is there anything else you'd like to share that has not been asked?",
           "location": "aboveStimulus",
           "type": "longText",
-          "placeholder": "Enter your comments here"
+          "placeholder": "Enter a brief summary of your answer"
         }
       ]
     }
@@ -168,7 +208,14 @@
       "introduction",
       "$screen-recording.co.screenRecordingPermission",
       "pre",
-      "figmaTask",
+      {
+        "order": "latinSquare",
+        "numSamples": 1,
+        "components": [
+          "figmaTaskA",
+          "figmaTaskB"
+        ]
+      },
       "post"
     ]
   }

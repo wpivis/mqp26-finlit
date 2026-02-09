@@ -29,7 +29,7 @@ test('test', async ({ page }) => {
   await page.getByTestId('q-most-frustrating').fill('asdf');
   await page.getByTestId('q-streak-feedback').fill('asdf');
   await page.getByTestId('q-goals-feedback').fill('asdf');
-  await page.getByTestId('q-magic-wand').fill('asdf');
+  await page.getByTestId('q-budget-feedback').fill('asdf');
   await page.getByTestId('q-additional-comments').fill('asdf');
 
   // Go to the next page
