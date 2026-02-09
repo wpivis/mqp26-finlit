@@ -36,7 +36,7 @@
       "path": "mqp-prototype/assets/introduction.md",
       "response": []
     },
-    "pre": {
+    "initialQuestions": {
       "type": "questionnaire",
       "recordAudio": true,
       "previousButton": true,
@@ -46,7 +46,7 @@
           "id": "textField2",
           "type": "textOnly",
           "location": "aboveStimulus",
-          "prompt": "# Questions before seeing prototype\n\n Answer below",
+          "prompt": "# Initial Questions\n\n Enter your answers below",
           "restartEnumeration": true
         },
         {
@@ -130,7 +130,7 @@
         }
       ]
     },
-    "postA": {
+    "reflectionQuestionsA": {
       "type": "questionnaire",
       "previousButton": true,
       "recordAudio": true,
@@ -139,13 +139,12 @@
           "id": "textField2",
           "type": "textOnly",
           "location": "aboveStimulus",
-          "prompt": "# Questions after seeing prototype\n\n Answer below",
+          "prompt": "# Prototype Reflections\n\n Enter your answers below",
           "restartEnumeration": true
         },
         {
           "id": "q-feature-satisfaction",
           "prompt": "Rate your satisfaction from 1 (Highly Unsatisfied) to 5 (Highly Satisfied) for the following items.",
-          "secondaryText": "A simple matrix of Likert responses with predefined options for satisfaction.",
           "location": "aboveStimulus",
           "type": "matrix-radio",
           "answerOptions": "satisfaction5",
@@ -200,7 +199,7 @@
         }
       ]
     },
-    "postB": {
+    "reflectionQuestionsB": {
       "type": "questionnaire",
       "previousButton": true,
       "recordAudio": true,
@@ -268,7 +267,7 @@
     "components": [
       "introduction",
       "$screen-recording.co.screenRecordingPermission",
-      "pre",
+      "initialQuestions",
       {
         "order": "latinSquare",
         "numSamples": 1,
@@ -277,14 +276,14 @@
             "order": "fixed",
             "components": [
               "figmaTaskA",
-              "postA"
+              "reflectionQuestionsA"
             ]
           },
           {
             "order": "fixed",
             "components": [
               "figmaTaskB",
-              "postB"
+              "reflectionQuestionsB"
             ]
           }
         ]
