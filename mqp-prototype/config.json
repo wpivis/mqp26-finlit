@@ -76,28 +76,14 @@
       "type": "website",
       "recordAudio": true,
       "path": "https://embed.figma.com/proto/cPBlfjySSUhw069Qlo3R1a/MQP-Prototype?page-id=1%3A91&node-id=170-2&starting-point-node-id=170%3A2&scaling=min-zoom&content-scaling=fixed&embed-host=share",
-      "instruction": "Please interact with the prototype below to complete the task. Zoom out (Ctrl -) if needed",
+      "instruction": "Please explore the savings app prototype below. Remember to speak your thoughts out loud as you navigate. Zoom out (Ctrl -) if needed",
       "response": [
         {
           "id": "header",
           "type": "textOnly",
           "location": "sidebar",
-          "prompt": "# Prototype",
+          "prompt": "### Think-Aloud Instructions\n\nYour audio is being recorded. Please say out loud everything you are thinking as you move through the app.\n\n**As you explore, describe:**\n\n- What you notice\n- What you expect to happen\n- What feels clear or confusing\n- Why you choose certain actions\n\n**Feel free to interact with items such as:**\n\n- View Streak / Budget / All Goals buttons\n- Individual goal cards\n- Preset dollar amounts when adding funds\n- Week / Month / 3 Month tabs\n- Navigation buttons (Back, Home, Confirm)\n\nNote: Some totals and progress bars will update based on what you select. There are no right or wrong actions; we are evaluating the design, not you.",
           "restartEnumeration": true
-        },
-        {
-          "id": "q-confusing",
-          "prompt": "Is there anything on this page that feels confusing or out of place?",
-          "location": "sidebar",
-          "type": "longText",
-          "placeholder": "Enter your comments here"
-        },
-        {
-          "id": "q-missing",
-          "prompt": "What, if anything, is missing from this screen?",
-          "location": "sidebar",
-          "type": "longText",
-          "placeholder": "Enter your comments here"
         }
       ]
     },
@@ -105,28 +91,14 @@
       "type": "website",
       "recordAudio": true,
       "path": "https://embed.figma.com/proto/cPBlfjySSUhw069Qlo3R1a/MQP-Prototype?node-id=2230-409&scaling=min-zoom&content-scaling=fixed&page-id=2230%3A250&starting-point-node-id=2230%3A409&embed-host=share",
-      "instruction": "Please interact with the prototype below to complete the task. Zoom out (Ctrl -) if needed",
+      "instruction": "Please explore the savings app prototype below. Remember to speak your thoughts out loud as you navigate. Zoom out (Ctrl -) if needed",
       "response": [
         {
           "id": "header",
           "type": "textOnly",
           "location": "sidebar",
-          "prompt": "# Prototype",
+          "prompt": "### Think-Aloud Instructions\n\nYour audio is being recorded. Please say out loud everything you are thinking as you move through the app.\n\n**As you explore, describe:**\n\n- What you notice\n- What you expect to happen\n- What feels clear or confusing\n- Why you choose certain actions\n\n**Feel free to interact with items such as:**\n\n- View Budget / View All Goals buttons\n- Individual goal cards\n- Preset dollar amounts when adding funds\n- Week / Month / 3 Month tabs\n- Navigation buttons (Back, Home, Confirm)\n\nNote: Some totals and progress bars will update based on what you select. There are no right or wrong actions; we are evaluating the design, not you.",
           "restartEnumeration": true
-        },
-        {
-          "id": "q-confusing",
-          "prompt": "Is there anything on this page that feels confusing or out of place?",
-          "location": "sidebar",
-          "type": "longText",
-          "placeholder": "Enter your comments here"
-        },
-        {
-          "id": "q-missing",
-          "prompt": "What, if anything, is missing from this screen?",
-          "location": "sidebar",
-          "type": "longText",
-          "placeholder": "Enter your comments here"
         }
       ]
     },
