@@ -94,7 +94,7 @@
       "instruction": "Please explore the savings app prototype below. Remember to speak your thoughts out loud as you navigate. Zoom out (Ctrl -) if needed",
       "response": [
         {
-          "id": "header",
+          "id": "headerB",
           "type": "textOnly",
           "location": "sidebar",
           "prompt": "### Think-Aloud Instructions\n\nYour audio is being recorded. Please say out loud everything you are thinking as you move through the app.\n\n**As you explore, describe:**\n\n- What you notice\n- What you expect to happen\n- What feels clear or confusing\n- Why you choose certain actions\n\n**Feel free to interact with items such as:**\n\n- View Budget / View All Goals buttons\n- Individual goal cards\n- Preset dollar amounts when adding funds\n- Week / Month / 3 Month tabs\n- Navigation buttons (Back, Home, Confirm)\n\nNote: Some totals and progress bars will update based on what you select. There are no right or wrong actions; we are evaluating the design, not you.",
