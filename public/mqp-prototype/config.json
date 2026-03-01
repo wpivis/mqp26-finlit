@@ -232,6 +232,11 @@
           "placeholder": "Enter a brief summary of your answer"
         }
       ]
+    },
+    "submission-complete": {
+      "type": "markdown",
+      "path": "mqp-prototype/assets/complete.md",
+      "response": []
     }
   },
   "sequence": {
@@ -259,7 +264,11 @@
             ]
           }
         ]
-      }
+      },
+      "submission-complete"
     ]
+  },
+  "prolific": {
+    "completionCode": "CDJT0UMW"
   }
 }
