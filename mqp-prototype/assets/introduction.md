@@ -7,4 +7,4 @@ We are evaluating the design of a new mobile application intended to help users 
 
 Please Note:
 
-- This is a prototype, so not all buttons or features may be fully functional.
+- This is a prototype, so not all buttons or features may be fully functional. Some font issues are to be expected.
