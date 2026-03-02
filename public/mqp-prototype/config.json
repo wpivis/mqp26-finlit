@@ -23,7 +23,9 @@
     "withSidebar": true,
     "enumerateQuestions": true,
     "recordAudio": true,
-    "recordScreen": true
+    "recordScreen": true,
+    "urlParticipantIdParam": "PROLIFIC_PID",
+    "studyEndMsg": "Thank you for completing the study! Return to Prolific: [https://app.prolific.com/submissions/complete?cc=CDJT0UMW](https://app.prolific.com/submissions/complete?cc=CDJT0UMW)"
   },
   "importedLibraries": [
     "mic-check",
@@ -34,7 +36,17 @@
       "type": "markdown",
       "recordAudio": true,
       "path": "mqp-prototype/assets/introduction.md",
-      "response": []
+      "response": [
+        {
+          "id": "prolificId",
+          "prompt": "Please enter your Prolific ID",
+          "required": true,
+          "location": "belowStimulus",
+          "type": "shortText",
+          "placeholder": "Prolific ID",
+          "paramCapture": "PROLIFIC_PID"
+        }
+      ]
     },
     "initialQuestions": {
       "type": "questionnaire",
@@ -267,8 +279,5 @@
       },
       "submission-complete"
     ]
-  },
-  "prolific": {
-    "completionCode": "CDJT0UMW"
   }
 }

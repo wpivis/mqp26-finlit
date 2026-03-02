@@ -1,10 +1,11 @@
-# Study Complete!
+# Finalizing Your Session
 
-Thank you for participating in our research on financial savings prototypes. Your feedback is incredibly valuable to our project.
+You have completed all the tasks and questionnaires for this study.
 
-### Next Steps:
-* **Wait a moment:** You will be automatically redirected back to Prolific in a few seconds to confirm your submission.
-* **Manual Completion:** If the redirect does not happen automatically, please click the "Next" button in the ReVisit sidebar to finalize your session.
+### To receive your payment:
+1. Click the **'Next'** button in the sidebar.
+2. A final thank-you message will appear with your **Prolific Completion Link**.
+3. Click that link to return to Prolific and finalize your submission.
 
-**Thank you again for your time!**
+**Thank you for your valuable feedback!**
 — The MQP Research Team
