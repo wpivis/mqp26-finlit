@@ -48,6 +48,11 @@
         }
       ]
     },
+    "consentForm": {
+      "type": "markdown",
+      "path": "mqp-prototype/assets/consent.md",
+      "response": []
+    },
     "initialQuestions": {
       "type": "questionnaire",
       "recordAudio": true,
@@ -255,6 +260,7 @@
     "order": "fixed",
     "components": [
       "introduction",
+      "consentForm",
       "$screen-recording.co.screenRecordingPermission",
       "initialQuestions",
       {
